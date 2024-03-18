@@ -25,9 +25,9 @@ public class UserRepository
         return _client.Collection<UserModel>(_databaseName, _collectionName);
     }
 
-    public UserModel GetById(string uuid)
+    public UserModel GetById(Guid id)
     {
-        return Here().Find(x => x.Uuid == uuid).FirstOrDefault();
+        return Here().Find(x => x.Guid == id).FirstOrDefault();
     }
 
     public void Save(UserModel user)
@@ -37,11 +37,11 @@ public class UserRepository
     
     public void Update(UserModel user)
     {
-        Here().ReplaceOne(x => x.Uuid == user.Uuid, user);
+        Here().ReplaceOne(x => x.Guid == user.Guid, user);
     }
     
-    public void Delete(string uuid)
+    public void Delete(Guid id)
     {
-        Here().DeleteOne(x => x.Uuid == uuid);
+        Here().DeleteOne(x => x.Guid == id);
     }
 }

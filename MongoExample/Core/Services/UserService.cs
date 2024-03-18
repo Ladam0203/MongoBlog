@@ -12,9 +12,9 @@ public class UserService
         _userRepository = userRepository;
     }
     
-    public UserModel GetById(string uuid)
+    public UserModel GetById(Guid id)
     {
-        return _userRepository.GetById(uuid);
+        return _userRepository.GetById(id);
     }
     
     public void Save(UserModel user)
@@ -22,9 +22,9 @@ public class UserService
         _userRepository.Save(user);
     }
     
-    public void Delete(string uuid)
+    public void Delete(Guid id)
     {
-        _userRepository.Delete(uuid);
+        _userRepository.Delete(id);
     }
     
     public void Update(UserModel user)
