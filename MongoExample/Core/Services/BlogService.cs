@@ -24,7 +24,8 @@ public class BlogService
         {
             Guid = Guid.NewGuid(),
             Title = dto.Title,
-            author = new ShallowUser { Guid = dto.Author.Guid, Name = dto.Author.Name }
+            author = new ShallowUser { Guid = dto.Author.Guid, Name = dto.Author.Name },
+            posts = new List<ShallowPost>()
         };
         _repository.Save(blog);
     }
