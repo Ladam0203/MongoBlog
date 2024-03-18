@@ -5,6 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddSingleton(UserServiceFactory.Create());
 builder.Services.AddSingleton(BlogServiceFactory.Create());
+builder.Services.AddSingleton(PostServiceFactory.Create());
 builder.Services.AddControllers();
 // Swagger
 builder.Services.AddEndpointsApiExplorer();

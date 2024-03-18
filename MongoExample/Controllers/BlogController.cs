@@ -16,8 +16,9 @@ public class BlogController
     }
     
     [HttpGet("{guid}")]
-    public BlogModel Get(Guid id)
+    public BlogModel Get([FromRoute] string guid)
     {
+        Guid id = Guid.Parse(guid);
         return _service.GetById(id);
     }
     

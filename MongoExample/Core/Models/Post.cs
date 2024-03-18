@@ -21,3 +21,11 @@ public class ShallowPost
     public Guid Guid { get; set; }
     public string Title { get; set; }
 }
+
+public class PostPostDTO
+{
+    public string Title { get; set; }
+    public string Content { get; set; }
+    public ShallowBlog Blog { get; set; }
+    public ShallowUser Author { get; set; }
+}
