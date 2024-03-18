@@ -2,7 +2,7 @@
 
 public class BlogModel
 {
-    public string Uuid { get; set; }
+    public Guid Guid { get; set; }
     public string Title { get; set; }
     public ShallowUser author { get; set; }
     public IEnumerable<ShallowPost> posts { get; set; }
@@ -10,6 +10,6 @@ public class BlogModel
 
 public class ShallowBlog
 {
-    public string Uuid { get; set; }
+    public Guid Guid { get; set; }
     public string Title { get; set; }
 }

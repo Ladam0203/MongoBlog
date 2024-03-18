@@ -2,7 +2,7 @@
 
 public class CommentModel
 {
-    public string Uuid { get; set; }
+    public Guid Guid { get; set; }
     public string Content { get; set; }
     public DateTime Timestamp { get; set; }
     public ShallowPost post { get; set; }

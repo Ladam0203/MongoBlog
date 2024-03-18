@@ -2,7 +2,7 @@
 
 public class PostModel
 {
-    public string Uuid { get; set; }
+    public Guid Guid { get; set; }
     public string Title { get; set; }
     public string Content { get; set; }
     public DateTime Timestamp { get; set; }
@@ -13,6 +13,6 @@ public class PostModel
 
 public class ShallowPost
 {
-    public string Uuid { get; set; }
+    public Guid Guid { get; set; }
     public string Title { get; set; }
 }

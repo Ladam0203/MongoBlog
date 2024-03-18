@@ -15,10 +15,10 @@ public class UserController : ControllerBase
         _userService = userService;
     }
     
-    [HttpGet]
-    public UserModel Get(string uuid)
+    [HttpGet("{guid}")]
+    public UserModel Get(Guid id)
     {
-        return _userService.GetById(uuid);
+        return _userService.GetById(id);
     }
     
     [HttpPost]
