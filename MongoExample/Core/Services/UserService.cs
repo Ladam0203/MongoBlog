@@ -5,30 +5,37 @@ namespace MongoExample.Core.Services;
 
 public class UserService
 {
-    private readonly UserRepository _userRepository;
+    private readonly UserRepository _repository;
     
-    public UserService(UserRepository userRepository)
+    public UserService(UserRepository repository)
     {
-        _userRepository = userRepository;
+        _repository = repository;
     }
     
     public UserModel GetById(Guid id)
     {
-        return _userRepository.GetById(id);
+        return _repository.GetById(id);
     }
     
-    public void Save(UserModel user)
+    public void Save(PostUserDTO dto)
     {
-        _userRepository.Save(user);
+        // Map
+        var user = new UserModel
+        {
+            Guid = Guid.NewGuid(),
+            Name = dto.Name,
+            blogs = new List<ShallowBlog>()
+        };
+        _repository.Save(user);
     }
     
     public void Delete(Guid id)
     {
-        _userRepository.Delete(id);
+        _repository.Delete(id);
     }
     
     public void Update(UserModel user)
     {
-        _userRepository.Update(user);
+        _repository.Update(user);
     }
 }

@@ -14,3 +14,8 @@ public class ShallowUser
     public Guid Guid { get; set; }
     public string Name { get; set; }
 }
+
+public class PostUserDTO
+{
+    public string Name { get; set; }
+}

@@ -22,7 +22,7 @@ public class UserController : ControllerBase
     }
     
     [HttpPost]
-    public void Post([FromBody] UserModel user)
+    public void Post([FromBody] PostUserDTO user)
     {
         _userService.Save(user);
     }

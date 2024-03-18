@@ -13,3 +13,9 @@ public class ShallowBlog
     public Guid Guid { get; set; }
     public string Title { get; set; }
 }
+
+public class PostBlogDTO
+{
+    public string Title { get; set; }
+    public Guid AuthorId { get; set; }
+}
