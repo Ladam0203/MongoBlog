@@ -22,8 +22,8 @@ public class BlogController
     }
     
     [HttpPost]
-    public void Post([FromBody] BlogModel blog)
+    public void Post([FromBody] PostBlogDTO dto)
     {
-        _service.Save(blog);
+        _service.Save(dto);
     }
 }

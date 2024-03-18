@@ -17,8 +17,15 @@ public class BlogService
         return _repository.GetById(id);
     }
     
-    public void Save(BlogModel blog)
+    public void Save(PostBlogDTO dto)
     {
+        //Map 
+        var blog = new BlogModel
+        {
+            Guid = Guid.NewGuid(),
+            Title = dto.Title,
+            author = new ShallowUser { Guid = dto.Author.Guid, Name = dto.Author.Name }
+        };
         _repository.Save(blog);
     }
 }
