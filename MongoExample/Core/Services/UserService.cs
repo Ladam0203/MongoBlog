@@ -17,7 +17,7 @@ public class UserService
         return _repository.GetById(id);
     }
     
-    public void Save(PostUserDTO dto)
+    public UserModel Save(PostUserDTO dto)
     {
         // Map
         var user = new UserModel
@@ -27,6 +27,7 @@ public class UserService
             blogs = new List<ShallowBlog>()
         };
         _repository.Save(user);
+        return user;
     }
     
     public void Delete(Guid id)

@@ -1,7 +1,12 @@
-﻿namespace MongoExample.Core.Models;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+namespace MongoExample.Core.Models;
 
 public class BlogModel
 {
+    [BsonId]
+    [BsonRepresentation(BsonType.String)]
     public Guid Guid { get; set; }
     public string Title { get; set; }
     public ShallowUser author { get; set; }

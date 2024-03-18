@@ -27,7 +27,10 @@ public class UserRepository
 
     public UserModel GetById(Guid id)
     {
-        return Here().Find(x => x.Guid == id).FirstOrDefault();
+        Console.WriteLine("Looking for user with id: " + id + " in the database.");
+        UserModel user = Here().Find(x => x.Guid == id).FirstOrDefault();
+        Console.WriteLine("User: " + user.Name);
+        return user;
     }
 
     public void Save(UserModel user)

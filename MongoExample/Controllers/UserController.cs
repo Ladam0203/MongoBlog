@@ -16,14 +16,15 @@ public class UserController : ControllerBase
     }
     
     [HttpGet("{guid}")]
-    public UserModel Get(Guid id)
+    public UserModel Get([FromRoute] string guid)
     {
+        Guid id = Guid.Parse(guid);
         return _userService.GetById(id);
     }
     
     [HttpPost]
-    public void Post([FromBody] PostUserDTO user)
+    public UserModel Post([FromBody] PostUserDTO user)
     {
-        _userService.Save(user);
+        return _userService.Save(user);
     }
 }
