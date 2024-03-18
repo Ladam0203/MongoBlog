@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/patrickstolc/RiderProjects/MongoExample/MongoExample/MongoExample.csproj": {}
+    "D:\\EASV\\PBSW\\DLS\\MongoBlog\\MongoExample\\MongoExample.csproj": {}
   },
   "projects": {
-    "/Users/patrickstolc/RiderProjects/MongoExample/MongoExample/MongoExample.csproj": {
+    "D:\\EASV\\PBSW\\DLS\\MongoBlog\\MongoExample\\MongoExample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/patrickstolc/RiderProjects/MongoExample/MongoExample/MongoExample.csproj",
+        "projectUniqueName": "D:\\EASV\\PBSW\\DLS\\MongoBlog\\MongoExample\\MongoExample.csproj",
         "projectName": "MongoExample",
-        "projectPath": "/Users/patrickstolc/RiderProjects/MongoExample/MongoExample/MongoExample.csproj",
-        "packagesPath": "/Users/patrickstolc/.nuget/packages/",
-        "outputPath": "/Users/patrickstolc/RiderProjects/MongoExample/MongoExample/obj/",
+        "projectPath": "D:\\EASV\\PBSW\\DLS\\MongoBlog\\MongoExample\\MongoExample.csproj",
+        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+        "outputPath": "D:\\EASV\\PBSW\\DLS\\MongoBlog\\MongoExample\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/patrickstolc/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.405/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

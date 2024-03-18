@@ -3,7 +3,7 @@ using MongoExample.Core.Factories;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddSingleton(WebEventServiceFactory.Create());
+builder.Services.AddSingleton(UserServiceFactory.Create());
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
